@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "rewrites": [
+    { "source": "/api/posts", "destination": "/api/posts" },
+    { "source": "/api/posts/(.*)", "destination": "/api/posts/[id]" },
+    { "source": "/post", "destination": "/post.html" }
+  ]
+}
