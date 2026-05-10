@@ -5,26 +5,55 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>小姚的太空博客</title>
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 <body>
   <canvas id="starfield"></canvas>
+  
   <div class="container">
     <header class="site-header">
+      <div class="header-decoration">
+        <span class="deco-line"></span>
+        <span class="deco-dot">•</span>
+        <span class="deco-line"></span>
+      </div>
       <h1 class="site-title">🚀 小姚的太空博客</h1>
-      <p class="site-desc">记录生活中的每一颗星星</p>
+      <p class="site-desc">在星辰间记录每一段旅程</p>
       <nav>
         <a href="/admin" class="btn-neon">✍️ 写新文章</a>
       </nav>
+      <div class="header-decoration" style="margin-top: 2rem;">
+        <span class="deco-line"></span>
+        <span class="deco-dot">✦</span>
+        <span class="deco-line"></span>
+      </div>
     </header>
+
     <main>
+      <div class="section-header">
+        <h2 class="section-title">📚 文章列表</h2>
+        <p class="section-desc">探索星际间的思考与记录</p>
+      </div>
+      
       <div id="posts-list" class="posts-list">
-        <p class="loading">正在从星际空间加载文章...</p>
+        <div class="empty-state" id="empty-state" style="display: none;">
+          <div class="empty-icon">🌌</div>
+          <p class="empty-text">还没有文章，开始你的第一篇创作吧！</p>
+          <a href="/admin" class="btn-neon" style="margin-top: 1.5rem;">✍️ 写第一篇文章</a>
+        </div>
+        <p class="loading" id="loading">正在从星际空间加载文章...</p>
       </div>
     </main>
+
     <footer class="site-footer">
-      <p>© 2026 小姚的太空博客 · Powered by Node.js</p>
+      <div class="footer-content">
+        <p>© 2026 小姚的太空博客</p>
+        <p class="footer-sub">Powered by Node.js & GitHub Pages</p>
+      </div>
     </footer>
   </div>
+
   <script src="/js/index.js"></script>
 </body>
 </html>
