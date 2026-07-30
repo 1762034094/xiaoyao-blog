@@ -112,8 +112,8 @@
                 geo: {
                     map: 'china',
                     roam: true,
-                    zoom: 1.2,
-                    center: [104.5, 36],
+                    zoom: 1.1,
+                    center: [103, 33],
                     itemStyle: {
                         areaColor: '#1a1a3e',
                         borderColor: '#3a3a6e',
