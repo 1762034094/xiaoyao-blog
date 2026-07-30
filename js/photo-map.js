@@ -157,7 +157,7 @@
                         coordinateSystem: 'geo',
                         data: scatterData,
                         symbolSize: function(val) {
-                            return Math.max(8, val[2] * 3);
+                            return Math.max(6, Math.min(val[2] * 1.5, 22));
                         },
                         itemStyle: {
                             color: '#ff6b9d',
