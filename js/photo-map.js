@@ -78,8 +78,8 @@
     });
 
     // ---- 中国地图 ----
-    // 从 DataV 加载 GeoJSON
-    fetch('https://geo.datav.aliyun.com/areas_v3/bound/100000_full.json')
+    // 从本地加载 GeoJSON
+    fetch('data/china.json')
         .then(function(res) { return res.json(); })
         .then(function(geoJson) {
             echarts.registerMap('china', geoJson);
