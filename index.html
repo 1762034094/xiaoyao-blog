@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的个人网站</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- 使用 Google Fonts 中文字体 -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">MySite</a>
+            <ul class="nav-menu">
+                <li><a href="#home">首页</a></li>
+                <li><a href="#about">关于我</a></li>
+                <li><a href="#skills">技能</a></li>
+                <li><a href="#projects">项目</a></li>
+                <li><a href="#contact">联系</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="菜单">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 首页/英雄区 -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <p class="hero-greeting">你好，我是</p>
+            <h1 class="hero-name">张三</h1>
+            <p class="hero-subtitle">全栈开发者 / 终身学习者</p>
+            <p class="hero-desc">
+                热爱技术，喜欢用代码创造有趣的东西。<br>
+                目前在探索 AI、Web 开发和开源世界。
+            </p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">查看作品</a>
+                <a href="#contact" class="btn btn-outline">联系我</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="hero-avatar">👨‍💻</div>
+        </div>
+    </section>
+
+    <!-- 关于我 -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">关于我</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        我是一名热爱编程的开发者，拥有 X 年的软件开发经验。
+                        擅长前端和后端技术，对新技术充满好奇心。
+                    </p>
+                    <p>
+                        工作之余，我喜欢写技术博客、参与开源项目，
+                        偶尔也玩玩游戏、看看科幻电影。
+                    </p>
+                    <p>
+                        目前我正在深入学习 AI/ML 相关技术，
+                        希望将人工智能应用到实际产品中。
+                    </p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat">
+                        <span class="stat-number">5+</span>
+                        <span class="stat-label">年经验</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">20+</span>
+                        <span class="stat-label">完成项目</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">3</span>
+                        <span class="stat-label">开源贡献</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 技能 -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">技能</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">🎨</div>
+                    <h3>前端开发</h3>
+                    <p>HTML, CSS, JavaScript, React, Vue</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">⚙️</div>
+                    <h3>后端开发</h3>
+                    <p>Python, Node.js, Go, REST API</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🗄️</div>
+                    <h3>数据库</h3>
+                    <p>MySQL, PostgreSQL, MongoDB, Redis</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">☁️</div>
+                    <h3>DevOps</h3>
+                    <p>Docker, Git, CI/CD, Linux</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🤖</div>
+                    <h3>AI / ML</h3>
+                    <p>Python, PyTorch, LangChain</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🛠️</div>
+                    <h3>工具</h3>
+                    <p>VS Code, Figma, Postman, Notion</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 项目 -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">项目作品</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">🖥️</div>
+                    <div class="project-info">
+                        <h3>项目名称一</h3>
+                        <p>这是一个有趣的项目，解决了某个实际问题。使用了 React + Node.js 技术栈。</p>
+                        <div class="project-tags">
+                            <span>React</span><span>Node.js</span><span>MongoDB</span>
+                        </div>
+                        <a href="#" class="project-link">了解更多 →</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">📱</div>
+                    <div class="project-info">
+                        <h3>项目名称二</h3>
+                        <p>移动端应用，帮助用户管理日常任务，界面简洁高效。</p>
+                        <div class="project-tags">
+                            <span>Vue</span><span>Firebase</span><span>PWA</span>
+                        </div>
+                        <a href="#" class="project-link">了解更多 →</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">🤖</div>
+                    <div class="project-info">
+                        <h3>AI 聊天机器人</h3>
+                        <p>基于大语言模型的智能助手，可以回答问题、写代码、翻译文本。</p>
+                        <div class="project-tags">
+                            <span>Python</span><span>OpenAI</span><span>FastAPI</span>
+                        </div>
+                        <a href="#" class="project-link">了解更多 →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系方式 -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">联系我</h2>
+            <p class="contact-subtitle">
+                如果你对我的项目感兴趣，或者想一起合作，欢迎联系我！
+            </p>
+            <div class="contact-links">
+                <a href="mailto:yourname@example.com" class="contact-item">
+                    <span class="contact-icon">📧</span>
+                    <span>Email</span>
+                </a>
+                <a href="https://github.com" target="_blank" class="contact-item">
+                    <span class="contact-icon">💻</span>
+                    <span>GitHub</span>
+                </a>
+                <a href="#" class="contact-item">
+                    <span class="contact-icon">💬</span>
+                    <span>微信</span>
+                </a>
+                <a href="#" class="contact-item">
+                    <span class="contact-icon">🐦</span>
+                    <span>Twitter</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <p>&copy; 2024 MySite. All rights reserved.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
