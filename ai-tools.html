@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 效率工具 — 知隅</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0a0a14;
+            --card: #13132a;
+            --text: #e0e0f0;
+            --muted: #8888aa;
+            --accent: #6c63ff;
+            --border: rgba(255,255,255,0.08);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .back {
+            position: absolute;
+            top: 30px; left: 24px;
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+        .back:hover { opacity: 0.7; }
+        header {
+            text-align: center;
+            padding: 80px 20px 20px;
+        }
+        header h1 { font-size: 2rem; font-weight: 700; }
+        header p  { color: var(--muted); font-size: 0.95rem; margin-top: 6px; }
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            max-width: 1050px;
+            width: 100%;
+            padding: 20px 24px 60px;
+        }
+        .tool-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 36px 28px;
+            text-align: center;
+            transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+            color: var(--text);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 14px;
+        }
+        .tool-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--accent);
+            box-shadow: 0 12px 40px rgba(108,99,255,0.2);
+        }
+        .tool-icon { font-size: 3rem; }
+        .tool-name { font-size: 1.3rem; font-weight: 700; }
+        .tool-desc { color: var(--muted); font-size: 0.9rem; line-height: 1.6; }
+        .tool-tag {
+            display: inline-block;
+            background: rgba(108,99,255,0.15);
+            color: var(--accent);
+            padding: 3px 12px;
+            border-radius: 12px;
+            font-size: 0.78rem;
+            margin-top: 4px;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back">← 返回首页</a>
+    <header>
+        <h1>🤖 AI 效率工具</h1>
+        <p>日常使用的 AI 编程助手和自动化工具</p>
+    </header>
+    <div class="tools-grid">
+        <!-- Codex -->
+        <a href="https://github.com/openai/codex" target="_blank" class="tool-card">
+            <div class="tool-icon">🧠</div>
+            <div class="tool-name">OpenAI Codex</div>
+            <div class="tool-desc">
+                OpenAI 推出的终端 AI 编程助手，可以在命令行中理解代码库、编写修改代码、运行测试。
+            </div>
+            <span class="tool-tag">终端 · 编程</span>
+        </a>
+        <!-- Hermes -->
+        <a href="https://hermes-agent.nousresearch.com/" target="_blank" class="tool-card">
+            <div class="tool-icon">⚡</div>
+            <div class="tool-name">Hermes Agent</div>
+            <div class="tool-desc">
+                Nous Research 出品的智能 AI 代理，支持终端操作、浏览器控制、文件管理、GitHub 工作流等。
+            </div>
+            <span class="tool-tag">代理 · 全能</span>
+        </a>
+        <!-- Claude Code -->
+        <a href="https://docs.anthropic.com/en/docs/claude-code" target="_blank" class="tool-card">
+            <div class="tool-icon">💎</div>
+            <div class="tool-name">Claude Code</div>
+            <div class="tool-desc">
+                Anthropic 的终端 AI 编程工具，深度理解代码结构，擅长大规模重构、调试和代码审查。
+            </div>
+            <span class="tool-tag">终端 · 编程</span>
+        </a>
+    </div>
+</body>
+</html>
