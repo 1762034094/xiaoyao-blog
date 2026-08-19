@@ -115,12 +115,12 @@
                     zoom: 1.1,
                     center: [103, 33],
                     itemStyle: {
-                        areaColor: '#1a1a3e',
-                        borderColor: '#3a3a6e',
+                        areaColor: '#0d0d0d',
+                        borderColor: 'rgba(247,249,250,0.16)',
                         borderWidth: 1
                     },
                     emphasis: {
-                        itemStyle: { areaColor: '#2a2a5e' },
+                        itemStyle: { areaColor: '#161616' },
                         label: { show: false }
                     }
                 },
@@ -138,13 +138,13 @@
                             period: 4
                         },
                         itemStyle: {
-                            color: '#6c63ff'
+                            color: '#af50ff'
                         },
                         label: {
                             show: true,
                             position: 'right',
                             formatter: '{b}',
-                            color: '#ccc',
+                            color: '#e1bdff',
                             fontSize: 11
                         },
                         emphasis: {
@@ -160,9 +160,9 @@
                             return Math.max(6, Math.min(val[2] * 1.5, 22));
                         },
                         itemStyle: {
-                            color: '#ff6b9d',
+                            color: '#af50ff',
                             shadowBlur: 10,
-                            shadowColor: 'rgba(255,107,157,0.5)'
+                            shadowColor: 'rgba(175,80,255,0.5)'
                         },
                         label: {
                             show: false
@@ -185,7 +185,7 @@
                         el.scrollIntoView({ behavior: 'smooth', block: 'start' });
                         // 高亮闪烁
                         el.style.transition = 'none';
-                        el.style.background = 'rgba(108,99,255,0.08)';
+                        el.style.background = 'rgba(175,80,255,0.10)';
                         setTimeout(function() {
                             el.style.transition = 'background 0.8s';
                             el.style.background = '';

@@ -4,91 +4,139 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI 效率工具 — 知隅</title>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Lora:ital,wght@0,400;1,400;1,500&family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg: #0a0a14;
-            --card: #13132a;
-            --text: #e0e0f0;
-            --muted: #8888aa;
-            --accent: #6c63ff;
-            --border: rgba(255,255,255,0.08);
+            --bg: #090909;
+            --card: #0d0d0d;
+            --text: #f7f9fa;
+            --muted: #828384;
+            --steel: #6b6b6b;
+            --accent: #af50ff;
+            --lavender: #e1bdff;
+            --border: rgba(247, 249, 250, 0.16);
+            --hairline: rgba(247, 249, 250, 0.08);
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: 'Noto Sans SC', sans-serif;
+            font-family: 'Inter', 'Noto Sans SC', sans-serif;
             background: var(--bg);
             color: var(--text);
+            font-weight: 300;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-            align-items: center;
         }
         .back {
             position: absolute;
-            top: 30px; left: 24px;
-            color: var(--accent);
+            top: 28px; left: 32px;
+            color: var(--text);
             text-decoration: none;
-            font-size: 0.95rem;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 13px;
+            letter-spacing: 0.04em;
         }
-        .back:hover { opacity: 0.7; }
+        .back:hover { color: var(--lavender); }
         header {
-            text-align: center;
-            padding: 80px 20px 20px;
+            padding: 120px 24px 20px;
+            max-width: 1050px;
+            margin: 0 auto;
+            width: 100%;
         }
-        header h1 { font-size: 2rem; font-weight: 700; }
-        header p  { color: var(--muted); font-size: 0.95rem; margin-top: 6px; }
+        .stamp {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: clamp(38px, 6vw, 64px);
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #f0f0f0;
+            line-height: 0.9;
+            margin-bottom: 14px;
+        }
+        header h1 {
+            font-family: 'Noto Serif SC', serif;
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        header p {
+            color: var(--muted);
+            font-size: 16px;
+        }
         .tools-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 24px;
+            gap: 1px;
+            background: var(--hairline);
+            border: 1px solid var(--hairline);
+            border-radius: 19.2px;
+            overflow: hidden;
             max-width: 1050px;
             width: 100%;
-            padding: 20px 24px 60px;
+            margin: 40px auto 80px;
         }
         .tool-card {
-            background: var(--card);
-            border: 1px solid var(--border);
-            border-radius: 14px;
-            padding: 36px 28px;
-            text-align: center;
-            transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+            background: var(--bg);
+            padding: 40px 28px;
             text-decoration: none;
             color: var(--text);
             display: flex;
             flex-direction: column;
-            align-items: center;
-            gap: 14px;
+            gap: 16px;
+            transition: background 0.25s ease;
+            position: relative;
         }
-        .tool-card:hover {
-            transform: translateY(-6px);
-            border-color: var(--accent);
-            box-shadow: 0 12px 40px rgba(108,99,255,0.2);
+        .tool-card:hover { background: #101010; }
+        .tool-icon {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 28px;
+            color: var(--text);
         }
-        .tool-icon { font-size: 3rem; }
-        .tool-name { font-size: 1.3rem; font-weight: 700; }
-        .tool-desc { color: var(--muted); font-size: 0.9rem; line-height: 1.6; }
+        .tool-name {
+            font-size: 20px;
+            font-weight: 400;
+            letter-spacing: -0.01em;
+        }
+        .tool-desc {
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.65;
+            flex: 1;
+        }
         .tool-tag {
-            display: inline-block;
-            background: rgba(108,99,255,0.15);
-            color: var(--accent);
-            padding: 3px 12px;
-            border-radius: 12px;
-            font-size: 0.78rem;
-            margin-top: 4px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            letter-spacing: 0.06em;
+            color: var(--text);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 5px 10px;
+            align-self: flex-start;
+        }
+        .tool-card.featured {
+            background: var(--accent);
+        }
+        .tool-card.featured .tool-desc { color: rgba(247, 249, 250, 0.85); }
+        .tool-card.featured .tool-tag { border-color: rgba(247, 249, 250, 0.5); }
+        @media (max-width: 768px) {
+            .back { position: static; display: block; padding: 24px 24px 0; }
+            header { padding: 40px 24px 20px; }
+            .tools-grid { margin-top: 24px; }
         }
     </style>
 </head>
 <body>
     <a href="index.html" class="back">← 返回首页</a>
     <header>
-        <h1>🤖 AI 效率工具</h1>
+        <div class="stamp">AI Tools</div>
+        <h1>AI 效率工具</h1>
         <p>日常使用的 AI 编程助手和自动化工具</p>
     </header>
     <div class="tools-grid">
         <!-- Codex -->
         <a href="https://github.com/openai/codex" target="_blank" class="tool-card">
-            <div class="tool-icon">🧠</div>
+            <div class="tool-icon">⌘</div>
             <div class="tool-name">OpenAI Codex</div>
             <div class="tool-desc">
                 OpenAI 推出的终端 AI 编程助手，可以在命令行中理解代码库、编写修改代码、运行测试。
@@ -96,7 +144,7 @@
             <span class="tool-tag">终端 · 编程</span>
         </a>
         <!-- Hermes -->
-        <a href="https://hermes-agent.nousresearch.com/" target="_blank" class="tool-card">
+        <a href="https://hermes-agent.nousresearch.com/" target="_blank" class="tool-card featured">
             <div class="tool-icon">⚡</div>
             <div class="tool-name">Hermes Agent</div>
             <div class="tool-desc">
@@ -106,7 +154,7 @@
         </a>
         <!-- Claude Code -->
         <a href="https://docs.anthropic.com/en/docs/claude-code" target="_blank" class="tool-card">
-            <div class="tool-icon">💎</div>
+            <div class="tool-icon">◇</div>
             <div class="tool-name">Claude Code</div>
             <div class="tool-desc">
                 Anthropic 的终端 AI 编程工具，深度理解代码结构，擅长大规模重构、调试和代码审查。

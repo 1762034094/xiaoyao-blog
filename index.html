@@ -3,83 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>知隅的个人网站</title>
+    <title>知隅 — 电气与自动化</title>
+    <meta name="description" content="知隅的个人网站 — 深耕电气与自动化领域，PLC 工业控制、AI 工具与摄影。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Lora:ital,wght@0,400;1,400;1,500&family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- 导航栏 -->
+
+    <!-- 顶部导航（磨砂玻璃） -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#home" class="nav-logo">知隅</a>
+            <a href="#top" class="nav-logo">知隅<span class="dot">.</span></a>
             <ul class="nav-menu">
-                <li><a href="#home">首页</a></li>
-                <li><a href="#about">关于我</a></li>
+                <li><a href="#about">关于</a></li>
                 <li><a href="#skills">技能</a></li>
                 <li><a href="#projects">项目</a></li>
                 <li><a href="#contact">联系</a></li>
             </ul>
+            <div class="nav-actions">
+                <a href="#contact" class="btn-nav">联系我</a>
+            </div>
             <button class="nav-toggle" aria-label="菜单">
                 <span></span><span></span><span></span>
             </button>
         </div>
     </nav>
 
-    <!-- 首页/英雄区 -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <p class="hero-greeting">你好，我是</p>
-            <h1 class="hero-name">知隅</h1>
-            <p class="hero-subtitle">电气与自动化 / 学生</p>
-            <p class="hero-desc">
-                深耕电气与自动化领域，热衷于程序、机械与工程实践。<br>
-                闲暇时携带相机记录光影，在严谨的技术工作与自由的视觉观察之间寻找平衡。<br>
-                保持好奇心，持续沉淀，脚踏实地探索热爱的事物。
-            </p>
-            <div class="hero-buttons">
-                <a href="#projects" class="btn btn-primary">查看项目</a>
-                <a href="#contact" class="btn btn-outline">联系我</a>
+    <!-- 英雄区：午夜天空 + 登机牌 -->
+    <header class="hero" id="top">
+        <div class="container hero-inner">
+            <div class="hero-content">
+                <p class="hero-kicker">Hello, I'm</p>
+                <h1 class="hero-display">
+                    <span class="serif-en">Zhiyu</span>
+                    知隅
+                </h1>
+                <p class="hero-sub">电气与自动化 <em>学生</em></p>
+                <p class="hero-desc">
+                    深耕电气与自动化领域，精通 PLC 编程与工业控制系统设计，
+                    在严谨的技术工作与自由的视觉观察之间寻找平衡。
+                </p>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn-primary">查看项目</a>
+                    <a href="#contact" class="btn-outline">联系我</a>
+                </div>
+            </div>
+
+            <!-- 登机牌卡片 -->
+            <div class="hero-pass">
+                <div class="boarding-pass">
+                    <div class="bp-head">
+                        <span class="bp-label">Boarding Pass</span>
+                        <span class="bp-flight">ZHIYU · NO.01</span>
+                    </div>
+                    <div class="bp-route">
+                        <span>STUDENT</span>
+                        <span class="bp-arrow">→</span>
+                        <span>PLC ENGINEER</span>
+                    </div>
+                    <div class="bp-row">
+                        <span class="bp-k">Name</span>
+                        <span class="bp-v">知隅</span>
+                    </div>
+                    <div class="bp-row">
+                        <span class="bp-k">Field</span>
+                        <span class="bp-v">电气与自动化</span>
+                    </div>
+                    <div class="bp-row">
+                        <span class="bp-k">Focus</span>
+                        <span class="bp-v">PLC · 工业控制</span>
+                    </div>
+                    <div class="bp-row">
+                        <span class="bp-k">Base</span>
+                        <span class="bp-v">中国 · 兰州</span>
+                    </div>
+                    <div class="bp-barcode"></div>
+                </div>
             </div>
         </div>
-        <div class="hero-visual">
-            <div class="hero-avatar">
-                    <img src="images/avatar.jpg" alt="知隅的头像">
-                </div>
-        </div>
-    </section>
+    </header>
 
     <!-- 关于我 -->
-    <section id="about" class="about">
+    <section id="about" class="section">
         <div class="container">
-            <h2 class="section-title">关于我</h2>
-            <div class="about-content">
+            <div class="section-stamp">
+                <span class="stamp-en">About</span>
+                <span class="stamp-cn">关于我</span>
+            </div>
+            <div class="about-grid">
                 <div class="about-text">
                     <p>
-                        我是知隅，目前是一名电气与自动化专业的学生。
+                        我是<strong>知隅</strong>，目前是一名电气与自动化专业的学生，
                         对程序、机械与工程实践充满热情，喜欢动手折腾，把想法变成现实。
                     </p>
                     <p>
-                        精通 PLC 编程与自动化控制，擅长工业控制系统设计与调试，
+                        精通 <strong>PLC 编程</strong>与自动化控制，擅长工业控制系统设计与调试，
                         也热衷于运用各种 AI 工具提升效率，走在科技前沿。
                     </p>
                     <p>
-                        业余时间我喜欢带着相机出门拍照，
-                        在技术之外保留一份对光影和构图的热爱。
+                        业余时间我喜欢带着相机出门拍照，在技术之外保留一份对光影和构图的热爱，
                         闲暇时也喜欢打打游戏、研究基金投资。
                     </p>
                 </div>
                 <div class="about-stats">
                     <div class="stat">
-                        <span class="stat-number">⚡</span>
-                        <span class="stat-label">电气自动化</span>
+                        <span class="stat-label">Electrical</span>
+                        <span class="stat-number">电气自动化</span>
                     </div>
                     <div class="stat">
-                        <span class="stat-number">⚙️</span>
-                        <span class="stat-label">PLC 控制</span>
+                        <span class="stat-label">Control</span>
+                        <span class="stat-number">PLC 控制</span>
                     </div>
                     <div class="stat">
-                        <span class="stat-number">📷</span>
-                        <span class="stat-label">摄影爱好</span>
+                        <span class="stat-label">Photography</span>
+                        <span class="stat-number">摄影爱好</span>
                     </div>
                 </div>
             </div>
@@ -87,47 +126,58 @@
     </section>
 
     <!-- 技能 -->
-    <section id="skills" class="skills">
+    <section id="skills" class="section">
         <div class="container">
-            <h2 class="section-title">技能 & 爱好</h2>
+            <div class="section-stamp">
+                <span class="stamp-en">Skills</span>
+                <span class="stamp-cn">技能 & 爱好</span>
+            </div>
             <div class="skills-grid">
                 <div class="skill-card">
-                    <div class="skill-icon">⚙️</div>
+                    <span class="skill-index">01</span>
+                    <span class="skill-icon">⚙</span>
                     <h3>PLC 编程</h3>
                     <p>梯形图、结构化文本，工业自动化控制系统设计</p>
                 </div>
                 <div class="skill-card">
-                    <div class="skill-icon">🤖</div>
+                    <span class="skill-index">02</span>
+                    <span class="skill-icon">🤖</span>
                     <h3>AI 应用</h3>
                     <p>熟练使用各类 AI 工具，探索 AI 辅助编程与自动化</p>
                 </div>
                 <div class="skill-card">
-                    <div class="skill-icon">⚡</div>
+                    <span class="skill-index">03</span>
+                    <span class="skill-icon">⚡</span>
                     <h3>电气工程</h3>
                     <p>电路设计、PLC、自动化控制系统</p>
                 </div>
                 <div class="skill-card">
-                    <div class="skill-icon">🔧</div>
+                    <span class="skill-index">04</span>
+                    <span class="skill-icon">＋</span>
                     <h3>工程实践</h3>
                     <p>动手能力强，喜欢机械组装与调试</p>
                 </div>
                 <div class="skill-card">
-                    <div class="skill-icon">📷</div>
+                    <span class="skill-index">05</span>
+                    <span class="skill-icon">◇</span>
                     <h3>摄影</h3>
                     <p>喜欢记录光影，构图与后期处理</p>
                 </div>
                 <div class="skill-card">
-                    <div class="skill-icon">📈</div>
+                    <span class="skill-index">06</span>
+                    <span class="skill-icon">↗</span>
                     <h3>投资</h3>
                     <p>关注基金投资，理性理财</p>
                 </div>
                 <div class="skill-card">
-                    <div class="skill-icon">🎮</div>
+                    <span class="skill-index">07</span>
+                    <span class="skill-icon">◌</span>
                     <h3>游戏</h3>
                     <p>闲暇时打打游戏放松身心</p>
                 </div>
                 <div class="skill-card">
-                    <div class="skill-icon">✈️</div>
+                    <span class="skill-index">08</span>
+                    <span class="skill-icon">✈</span>
                     <h3>旅游</h3>
                     <p>喜欢旅行，探索不同的城市与风景</p>
                 </div>
@@ -136,78 +186,95 @@
     </section>
 
     <!-- 项目 -->
-    <section id="projects" class="projects">
+    <section id="projects" class="section">
         <div class="container">
-            <h2 class="section-title">项目 & 实践</h2>
+            <div class="section-stamp">
+                <span class="stamp-en">Projects</span>
+                <span class="stamp-cn">项目 & 实践</span>
+            </div>
             <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">⚙️</div>
-                    <div class="project-info">
-                        <h3>PLC 工业控制项目</h3>
-                        <p>基于西门子/三菱 PLC 的工业自动化控制系统，涵盖梯形图编程、HMI 人机界面设计、传感器与执行器集成。</p>
-                        <div class="project-tags">
-                            <span>PLC</span><span>梯形图</span><span>自动化</span>
-                        </div>
-                        <a href="#" class="project-link">了解更多 →</a>
+                <!-- PLC 项目：唯一的紫色信标卡片 -->
+                <div class="project-card violet">
+                    <span class="project-index">01 / FLAGSHIP</span>
+                    <span class="project-icon">⚙</span>
+                    <h3>PLC 工业控制项目</h3>
+                    <p>基于西门子/三菱 PLC 的工业自动化控制系统，涵盖梯形图编程、HMI 人机界面设计、传感器与执行器集成。</p>
+                    <div class="project-tags">
+                        <span>PLC</span><span>梯形图</span><span>自动化</span>
                     </div>
+                    <a href="#contact" class="project-link">了解更多</a>
                 </div>
+                <!-- AI 效率工具 -->
                 <div class="project-card">
-                    <div class="project-image">🤖</div>
-                    <div class="project-info">
-                        <h3>AI 效率工具</h3>
-                        <p>利用 AI 大模型辅助编程、文档生成、信息检索，打造个人效率工具链，走在科技前沿。</p>
-                        <div class="project-tags">
-                            <span>AI</span><span>自动化</span><span>效率</span>
-                        </div>
-                        <a href="ai-tools.html" class="project-link">了解更多 →</a>
+                    <span class="project-index">02 / TOOLS</span>
+                    <span class="project-icon">⌘</span>
+                    <h3>AI 效率工具</h3>
+                    <p>利用 AI 大模型辅助编程、文档生成、信息检索，打造个人效率工具链，走在科技前沿。</p>
+                    <div class="project-tags">
+                        <span>AI</span><span>自动化</span><span>效率</span>
                     </div>
+                    <a href="ai-tools.html" class="project-link">了解更多</a>
                 </div>
+                <!-- 摄影作品集 -->
                 <div class="project-card">
-                    <div class="project-image">📷</div>
-                    <div class="project-info">
-                        <h3>摄影作品集</h3>
-                        <p>用镜头记录生活中的光影瞬间，在严谨的技术世界之外保留一方自由的视觉天地。</p>
-                        <div class="project-tags">
-                            <span>摄影</span><span>光影</span><span>记录</span>
-                        </div>
-                        <a href="photo-map.html" class="project-link">了解更多 →</a>
+                    <span class="project-index">03 / PHOTO</span>
+                    <span class="project-icon">◇</span>
+                    <h3>摄影作品集</h3>
+                    <p>用镜头记录生活中的光影瞬间，在严谨的技术世界之外保留一方自由的视觉天地。</p>
+                    <div class="project-tags">
+                        <span>摄影</span><span>光影</span><span>记录</span>
                     </div>
+                    <a href="photo-map.html" class="project-link">了解更多</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 联系方式 -->
-    <section id="contact" class="contact">
+    <!-- 联系 -->
+    <section id="contact" class="section">
         <div class="container">
-            <h2 class="section-title">联系我</h2>
-            <p class="contact-subtitle">
-                欢迎交流技术、摄影，或者一起打游戏～
-            </p>
+            <div class="section-stamp">
+                <span class="stamp-en">Contact</span>
+                <span class="stamp-cn">联系我</span>
+            </div>
             <div class="contact-links">
                 <a href="mailto:1762034094@QQ.COM" class="contact-item">
-                    <span class="contact-icon">📧</span>
-                    <span>Email</span>
+                    <span class="contact-icon">✉</span>
+                    <span class="contact-name">Email</span>
+                    <span class="contact-detail">1762034094@QQ.COM</span>
                 </a>
                 <a href="https://github.com/1762034094" target="_blank" class="contact-item">
-                    <span class="contact-icon">💻</span>
-                    <span>GitHub</span>
+                    <span class="contact-icon">⌘</span>
+                    <span class="contact-name">GitHub</span>
+                    <span class="contact-detail">@1762034094</span>
                 </a>
                 <a href="tel:18993509264" class="contact-item">
-                    <span class="contact-icon">📞</span>
-                    <span>电话</span>
+                    <span class="contact-icon">☎</span>
+                    <span class="contact-name">电话</span>
+                    <span class="contact-detail">189-9350-9264</span>
                 </a>
                 <a href="https://wpa.qq.com/msgrd?v=3&uin=1762034094&site=qq&menu=yes" target="_blank" class="contact-item">
-                    <span class="contact-icon">🐧</span>
-                    <span>QQ</span>
+                    <span class="contact-icon">◈</span>
+                    <span class="contact-name">QQ</span>
+                    <span class="contact-detail">1762034094</span>
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- 页脚 -->
+    <!-- 坐标页脚 -->
     <footer class="footer">
-        <p>&copy; 2024 知隅 — 保持好奇心，脚踏实地。</p>
+        <div class="container footer-inner">
+            <div class="footer-left">
+                <span class="plus">+</span>
+                <span class="brand">知隅</span>
+                <span>电气与自动化 · PLC 工业控制</span>
+            </div>
+            <div class="footer-right">
+                <span id="coord">36.0611° N, 103.8343° E</span>
+                <span class="heart">♥</span>
+            </div>
+        </div>
     </footer>
 
     <script src="js/main.js"></script>

@@ -15,16 +15,6 @@ if (navToggle && navMenu) {
     });
 }
 
-// 导航栏滚动效果
-const navbar = document.querySelector('.navbar');
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
-    }
-});
-
 // 当前页面区块高亮导航
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nav-menu a');
@@ -32,7 +22,7 @@ const navLinks = document.querySelectorAll('.nav-menu a');
 window.addEventListener('scroll', () => {
     let current = '';
     sections.forEach(section => {
-        const sectionTop = section.offsetTop - 100;
+        const sectionTop = section.offsetTop - 120;
         if (window.scrollY >= sectionTop) {
             current = section.getAttribute('id');
         }
@@ -43,14 +33,5 @@ window.addEventListener('scroll', () => {
         if (link.getAttribute('href') === '#' + current) {
             link.classList.add('active');
         }
-    });
-});
-
-// 页面加载动画
-document.addEventListener('DOMContentLoaded', () => {
-    document.body.style.opacity = '0';
-    document.body.style.transition = 'opacity 0.4s ease';
-    requestAnimationFrame(() => {
-        document.body.style.opacity = '1';
     });
 });
