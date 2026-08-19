@@ -614,12 +614,34 @@ ul {
     border: 1px solid var(--hairline);
     border-radius: var(--radius-cards);
     padding: var(--card-padding);
-    transition: border-color 0.25s ease;
+    transition: background-color 0.25s ease, border-color 0.25s ease;
     overflow: hidden;
 }
 
+/* Hover: 光标悬停的项目卡片变为紫色 */
 .project-card:hover {
-    border-color: rgba(247, 249, 250, 0.35);
+    background: var(--surface-violet-bloom);
+    border-color: var(--surface-violet-bloom);
+}
+
+.project-card:hover .project-index,
+.project-card:hover .project-icon,
+.project-card:hover h3,
+.project-card:hover p {
+    color: var(--color-almost-white);
+}
+
+.project-card:hover p {
+    color: rgba(247, 249, 250, 0.85);
+}
+
+.project-card:hover .project-tags span {
+    border-color: rgba(247, 249, 250, 0.5);
+    color: var(--color-almost-white);
+}
+
+.project-card:hover .project-link::after {
+    color: var(--color-near-black);
 }
 
 .project-index {
@@ -690,32 +712,6 @@ ul {
 
 .project-link:hover::after {
     transform: translateX(4px);
-}
-
-/* Violet Bloom Card — the single rationed accent card */
-.project-card.violet {
-    background: var(--surface-violet-bloom);
-    border-color: var(--surface-violet-bloom);
-}
-
-.project-card.violet .project-index,
-.project-card.violet .project-icon,
-.project-card.violet h3,
-.project-card.violet p {
-    color: var(--color-almost-white);
-}
-
-.project-card.violet p {
-    color: rgba(247, 249, 250, 0.85);
-}
-
-.project-card.violet .project-tags span {
-    border-color: rgba(247, 249, 250, 0.5);
-    color: var(--color-almost-white);
-}
-
-.project-card.violet .project-link::after {
-    color: var(--color-near-black);
 }
 
 /* ============ Contact ============ */
